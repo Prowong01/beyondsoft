@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+}
+
+.item1 {
+    width: 180px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.item2 {
+    width: 130px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
