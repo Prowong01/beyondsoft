@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>UltiScore</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width " />
+    <!-- Meta tags, styles, and scripts as provided -->
+  </head>
+  <body class="antialiased">
+    <div id="content"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        var xhr = new XMLHttpRequest();
+        let url =
+          "https://ultiscore.com/tournaments/malaysia-men-nationals-2024";
+        xhr.open("GET", url);
+        xhr.setRequestHeader("x-cuz-flag", "202405071524"); // Set request header
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            // Process the response
+            document.getElementById("content").innerText = xhr.responseText;
+          }
+        };
+
+        xhr.send();
+      });
+    </script>
+  </body>
+</html>
